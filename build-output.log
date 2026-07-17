@@ -1,0 +1,38 @@
+MSBuild version 18.7.8+1ac568fee for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/a/win11-taskbar-tuner/win11-taskbar-tuner/CMakeLists.txt
+  main.cpp
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\app.h(3,9): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+  (compiling source file '../src/main.cpp')
+      D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\app.h(3,9):
+      'WIN32_LEAN_AND_MEAN' previously declared on the command line
+  
+  taskbar_util.cpp
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\app.h(3,9): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+  (compiling source file '../src/taskbar_util.cpp')
+      D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\app.h(3,9):
+      'WIN32_LEAN_AND_MEAN' previously declared on the command line
+  
+  config.cpp
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\config.h(3,9): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+  (compiling source file '../src/config.cpp')
+      D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\config.h(3,9):
+      'WIN32_LEAN_AND_MEAN' previously declared on the command line
+  
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(33,12): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(44,41): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(51,41): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(57,41): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(70,43): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(72,43): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(74,43): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(86,45): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\src\config.cpp(91,45): error C2065: 'REG_KEY_APP_SETTINGS': undeclared identifier [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+  logger.cpp
+D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\logger.h(3,9): warning C4005: 'WIN32_LEAN_AND_MEAN': macro redefinition [D:\a\win11-taskbar-tuner\win11-taskbar-tuner\build\Win11TaskbarTuner.vcxproj]
+  (compiling source file '../src/logger.cpp')
+      D:\a\win11-taskbar-tuner\win11-taskbar-tuner\include\logger.h(3,9):
+      'WIN32_LEAN_AND_MEAN' previously declared on the command line
+  
+  Generating Code...
