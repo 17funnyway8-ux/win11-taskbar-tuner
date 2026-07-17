@@ -12,6 +12,10 @@ if(WIN32)
     # 静态链接 C/C++ 运行时，避免分发时依赖 VCRUNTIME140_1.dll 等
     # MultiThreaded = /MT（Release），MultiThreadedDebug = /MTd（Debug）
     set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+
+    # 源文件以 UTF-8 保存，告诉 MSVC 按 UTF-8 解析 L"中文" 宽字符串
+    # 避免 L"..." 字面量被错误地按系统 ANSI（中文=GBK）解析
+    add_compile_options(/utf-8)
 endif()
 
 # Source files (explicit listing, not GLOB — CMake best practice)
