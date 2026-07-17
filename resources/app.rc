@@ -1,0 +1,9 @@
+#include <windows.h>
+#include "resource.h"
+
+// Application icon
+IDI_APP_ICON    ICON    "app.ico"
+IDI_APP_ICON_SM ICON    "app.ico"
+
+// DPI-aware manifest
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "app.manifest"
