@@ -29,8 +29,10 @@ jobs:
       with:
         arch: amd64
     
-    - name: Configure CMake
-      run: cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.configuration }}
+    - name: Configure CMake (clean)
+      run: |
+        rm -rf build
+        cmake -B build -DCMAKE_BUILD_TYPE=${{ matrix.configuration }}
     
     - name: Build
       id: build_step

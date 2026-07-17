@@ -8,6 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 if(WIN32)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
     set(CMAKE_SYSTEM_VERSION 10.0)
+
+    # 静态链接 C/C++ 运行时，避免分发时依赖 VCRUNTIME140_1.dll 等
+    # MultiThreaded = /MT（Release），MultiThreadedDebug = /MTd（Debug）
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
 
 # Source files (explicit listing, not GLOB — CMake best practice)
