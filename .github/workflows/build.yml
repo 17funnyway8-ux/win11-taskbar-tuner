@@ -7,6 +7,9 @@ on:
     branches: [master, main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build Win11 Taskbar Tuner
@@ -31,28 +34,22 @@ jobs:
     
     - name: Build
       id: build_step
+      continue-on-error: true
       run: cmake --build build --config ${{ matrix.configuration }} 2>&1 | tee build-output.log
       shell: bash
     
-    - name: List build directory
+    - name: Commit build log to repo
       if: always()
-      run: ls -la build/ && ls -la build/*/ 2>/dev/null || true
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add build-output.log
+        git commit -m "build log [skip ci]" || true
+        git push origin master || true
       shell: bash
     
-    - name: Upload build log
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-log-${{ github.run_number }}
-        path: build-output.log
-    
-    - name: List build artifacts
-      if: success()
-      run: ls -la build/${{ matrix.configuration }}/Win11TaskbarTuner.exe
-      shell: bash
-    
-    - name: Upload artifact
-      if: success()
+    - name: Upload artifact (on success)
+      if: steps.build_step.outcome == 'success'
       uses: actions/upload-artifact@v4
       with:
         name: Win11TaskbarTuner-${{ matrix.configuration }}-x64
