@@ -1,6 +1,8 @@
 #pragma once
 
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #include <string>
 
@@ -8,6 +10,9 @@
 // 配置管理 — 持久化用户设置
 // 存储路径：HKCU\Software\Win11TaskbarTuner
 // ============================================================
+
+// 注册表路径
+#define REG_KEY_APP_SETTINGS   L"Software\\Win11TaskbarTuner"
 
 // 任务栏位置枚举（与 app.h 中一致，但 config 模块独立）
 enum class TaskbarEdge : int {
