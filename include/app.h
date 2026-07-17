@@ -1,6 +1,8 @@
 #pragma once
 
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
 #include <windows.h>
 #include <shellapi.h>
 #include <string>
@@ -55,7 +57,6 @@ enum TrayMenuCommand : UINT {
 // 注册表路径
 #define REG_KEY_STUCK_RECTS    L"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StuckRects3"
 #define REG_KEY_RUN            L"Software\\Microsoft\\Windows\\CurrentVersion\\Run"
-#define REG_KEY_APP_SETTINGS   L"Software\\Win11TaskbarTuner"
 
 // 任务栏窗口类名
 #define TASKBAR_CLASS_NAME     L"Shell_TrayWnd"
