@@ -1,5 +1,6 @@
 #include "logger.h"
 #include <shlobj.h>
+#include <cstdio>
 #include <ctime>
 #include <cstring>
 #include <sstream>
