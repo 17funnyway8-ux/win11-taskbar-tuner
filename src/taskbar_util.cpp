@@ -2,6 +2,8 @@
 #include <shlobj.h>
 #include <dwmapi.h>
 #include <tlhelp32.h>
+#include <winternl.h>
+#include <new>
 #include <sstream>
 #include <iomanip>
 #include <vector>
