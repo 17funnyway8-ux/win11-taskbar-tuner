@@ -16,3 +16,11 @@ deliverables/
 scripts/
 Thumbs.db
 Desktop.ini
+
+# 环境变量（防误提交本地凭据）
+.env
+.env.*
+!.env.example
+
+# 构建日志
+*.log
